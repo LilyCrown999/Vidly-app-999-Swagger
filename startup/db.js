@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const config = require('config');
 
 
+
+
 module.exports = function(){
+    
     const db = config.get('mongo_url');
 
     mongoose.connect(db, {

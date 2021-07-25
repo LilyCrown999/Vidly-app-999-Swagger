@@ -1,4 +1,4 @@
 {
     "jwtPrivateKey": "Michael",
-    "mongo_url" : "mongodb://localhost/vidly-DB"
+    "mongo_url" : "mongodb+srv://Lily-Crown999:Lily-Crown999@cluster0.ynj90.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }

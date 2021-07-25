@@ -1,3 +1,4 @@
 {
-    "jwtPrivateKey": "michael"
+    "jwtPrivateKey": "Boy",
+    "mongo_url" : "localhost/"
 }

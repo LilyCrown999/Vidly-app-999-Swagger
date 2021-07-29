@@ -9,7 +9,7 @@ const rentals = require('../routes/rentals');
 const users = require('../routes/users');
 const auth = require('../routes/auth');
  
-const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 
 
@@ -36,7 +36,7 @@ const specs = swaggerJsDoc(options);
 module.exports = function (app){
     
 app.use(express.json());
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(specs));
+app.use('/api-docs', swaggerUI.serve,swaggerUI.setup(specs));
 // app.use('/vidly/genres', genres);
 // app.use('/vidly/users', users);
 // app.use('/vidly/customers', customers);

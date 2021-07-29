@@ -36,7 +36,7 @@ const specs = swaggerJsDoc(options);
 module.exports = function (app){
     
 app.use(express.json());
-app.use('/api-docs', swaggerUI.serve,swaggerUI.setup(specs));
+app.use('/', swaggerUI.serve,swaggerUI.setup(specs));
 // app.use('/vidly/genres', genres);
 // app.use('/vidly/users', users);
 // app.use('/vidly/customers', customers);

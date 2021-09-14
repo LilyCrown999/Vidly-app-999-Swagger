@@ -1,11 +1,10 @@
 
-// const winston = require('winston');
-require('winston-mongodb');
+
 // const logger = require('../startup/logging');
 module.exports = function(err, req, res, next) {
     //Log the exception
 
-    winston.log({
+    console.log({
         level: 'error',
         message: err.message
       });

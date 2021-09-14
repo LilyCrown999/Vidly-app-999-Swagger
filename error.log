@@ -1,0 +1,11 @@
+{
+  level: 'warn',
+  message: 'Run "npm install apidoc -g" and then run "apidoc -e node_modules/" at your terminal',
+  log: [Error: ENOENT: no such file or directory, access 'C:\Users\1040 G3\vidly-app-999\doc\api_data.json'] {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'access',
+    path: 'C:\\Users\\1040 G3\\vidly-app-999\\doc\\api_data.json'
+  },
+  timestamp: '2021-08-01T00:03:13.334Z'
+}

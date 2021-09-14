@@ -8,42 +8,52 @@ const movies = require('../routes/movies');
 const rentals = require('../routes/rentals');
 const users = require('../routes/users');
 const auth = require('../routes/auth');
- 
-const swaggerJsDoc = require('swagger-jsdoc');
-const swaggerUI = require('swagger-ui-express');
 
+const app = express();
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
 
-const options = {
-    definition : {
-        openapi : '3.0.0',
-        info : {
-          title : 'Library API',
-          version : '1.0.0',
-          description : 'A simple Express Library API for vidly-app'
+const swaggerOptions = {
+    definition: {
+      openapi: "3.0.0",
+      info: {
+        title: "Vidly API with Swagger",
+        version: "0.1.0",
+        description:
+          "This is a simple CRUD API application made with Express and documented with Swagger",
+        license: {
+          name: "MIT",
+          url: "https://spdx.org/licenses/MIT.html",
         },
-        servers :[
-            {
-                url : 'https://vidly-app-999.herokuapp.com'
-            },
-        ],
+        contact: {
+          name: "LilyCrown999",
+          url: "https://github.com/LilyCrown999",
+          email: "lilycrown999@gmail.com",
+        },
+      },
+      servers: [                                                
+        {
+          url: "http://localhost:1400",
+        },
+      ],
     },
-        apis : ['*../routes/*.js']
-};
-
-const specs = swaggerJsDoc(options); 
+    apis: ["./api/swagger.js"],
+  };
+  
+  
+  const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
 
 module.exports = function (app){
     
 app.use(express.json());
-app.use('', swaggerUI.serve,swaggerUI.setup(specs));
-// app.use('/vidly/genres', genres);
-// app.use('/vidly/users', users);
-// app.use('/vidly/customers', customers);
-// app.use('/vidly/movies', movies);
-// app.use('/vidly/rentals', rentals);
-// app.use('/vidly/auth', auth);  
-
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: true }));
+app.use('/api/genres', genres);
+app.use('/api/users', users);
+app.use('/api/customers', customers);
+app.use('/api/movies', movies);
+app.use('/api/rentals', rentals);
+app.use('/api/auth', auth);  
 app.use(error);
 
 };

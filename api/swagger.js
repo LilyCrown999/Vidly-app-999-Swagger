@@ -78,3 +78,70 @@
  *       401:
  *         description: You are not an admin only admin(s) are allowed to create a genre 
  */
+
+/**
+ * @swagger
+ * /api/genres/{id}:
+ *  put:
+ *    summary: Update the genre by the id
+ *    tags: [Genres]
+ *    parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: The genre's id
+ *      - in: header
+ *        name: x-auth-token
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: Get this by taking the token in the header when create new user at post:/api/user then  login the user at post:/api/auth...
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *            $ref: '#/components/schemas/Genre'
+ *    responses:
+ *      200:
+ *        description: The genre was updated
+ *        content:
+ *          application/json:
+ *            schema:
+ *              $ref: '#/components/schemas/Genre'
+ *      404:
+ *        description: The genre with the given id was not found
+ *      500:
+ *        description: Some error happened
+ */
+
+/**
+ * @swagger
+ * /api/genres/{id}:
+ *   delete:
+ *     summary: Delete the genre by the id
+ *     tags: [Genres]
+ *     parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: The genre's id
+ *      - in: header
+ *        name: x-auth-token
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: Get this by taking the token in the header when create new user at post:/api/user then  login the user at post:/api/auth...
+ *     responses:
+ *       200:
+ *         description: Success
+ *       404:
+ *         description: Genres not found
+ *       500:
+ *         description: Something went wrong
+ * 
+ */

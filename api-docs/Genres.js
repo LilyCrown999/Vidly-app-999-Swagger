@@ -12,7 +12,7 @@
  *       properties:
  *         id:
  *           type: string
- *           description: The auto-generated id of the book
+ *           description: The auto-generated id of the genre
  *         name:
  *           type: string
  *           description: The name of the Genre 

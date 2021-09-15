@@ -9,12 +9,12 @@ const router = express.Router();
 
 
 router.get('/', async (req,res) =>{
- const user = await User.find().sort('name');
+ const user = await User.find().sort('name').select('-password');
  res.send(user);
 })
 
 
-router.get('/me', auth, async (req,res) =>{
+router.get('/:id', auth, async (req,res) =>{
   // const user = await User.findById(req.params.id);
   const user = await User.findById(req.user._id).select('-password');
 
@@ -82,7 +82,7 @@ router.put('/:id', async (req,res) =>{
 })
 
 
-router.delete('/', async (req,res) =>{
+router.delete('/:id', async (req,res) =>{
   const user = await User.findByIdAndRemove(req.params.id);
 
     if (!user) return res.status(404).json({success : true ,error :'Invalid user ...'});

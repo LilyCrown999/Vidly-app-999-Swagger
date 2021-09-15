@@ -20,7 +20,7 @@
  *           description: The name of the Genre 
  *         email:
  *           type: string
- *           description: The email of the user
+ *           description: The email of the user (*unique)
  *         password:
  *           type: string
  *           description: The password required for the user to login 
@@ -55,3 +55,59 @@
  * 
  */
 
+
+
+/**
+ * @swagger
+ * /api/users:
+ *   post:
+ *     summary: Create a new user
+ *     tags: [Users]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/User'
+ *     responses:
+ *       200:
+ *         description: The user was successfully created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       500:
+ *         description: Some server error 
+ */
+
+
+/**
+ * @swagger
+ * /api/users/{id}:
+ *   put:
+ *     summary: Create a new user
+ *     tags: [Users]
+ *     parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: Take the id from the user @get:/api/users
+ *           
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/User'
+ *     responses:
+ *       200:
+ *         description: The user was successfully created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       500:
+ *         description: Some server error 
+ */

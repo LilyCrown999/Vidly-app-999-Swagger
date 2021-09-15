@@ -50,7 +50,7 @@
  * @swagger
  * /api/genres/{id}:
  *    get:
- *     summary: Delete the genre by the id
+ *     summary: Get the genre by the id
  *     tags: [Genres]
  *     parameters:
  *      - in: path
@@ -135,7 +135,7 @@
  *      404:
  *        description: The genre with the given id was not found
  *      500:
- *        description: Some error happened
+ *        description: Some error occurred
  */
 
 /**
@@ -153,9 +153,9 @@
  *        description: The genre's id
  *     responses:
  *       200:
- *         description: Successfully deleted 😁😘
+ *         description: Successfully deleted 😁😘...
  *       500:
- *         description: Something went wrong
+ *         description: Something went wrong...
  * 
  */
 

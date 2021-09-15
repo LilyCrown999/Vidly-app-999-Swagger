@@ -20,7 +20,7 @@ const swaggerOptions = {
         title: "Vidly API with Swagger",
         version: "0.1.0",
         description:
-          "This is a simple CRUD API application made with Express and documented with Swagger",
+          "This is a vidly application made with Express and documented with Swagger",
         license: {
           name: "MIT",
           url: "https://spdx.org/licenses/MIT.html",
@@ -31,7 +31,11 @@ const swaggerOptions = {
           email: "lilycrown999@gmail.com",
         },
       },
-      servers: [                                                
+      servers: [  
+
+        {
+          url: "http://localhost:100",
+        },
         {
           url: "http://localhost:1400",
         },
@@ -48,7 +52,12 @@ const swaggerOptions = {
 module.exports = function (app){
     
 app.use(express.json());
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: true }));
+
+app.get('/',function (req, res) {
+  res.redirect('/api-docs');
+});
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use('/api/genres', genres);
 app.use('/api/users', users);
 app.use('/api/customers', customers);

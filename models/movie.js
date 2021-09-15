@@ -28,8 +28,7 @@ const Movie = mongoose.model('Movies', new mongoose.Schema({
   },
   releaseDate :{
     type :  Date,
-    default : Date.now(),
-    required: true
+    default : Date.now()
   }
 }));
 

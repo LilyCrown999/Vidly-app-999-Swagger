@@ -27,8 +27,7 @@ router.post('/', auth , async (req, res) => {
       name: genre.name
     },
      writer: req.body.writer,
-     isReleased: req.body.isReleased,
-     releaseDate : req.body.releaseDate
+     isReleased: req.body.isReleased
   });
    await movie.save();
   
@@ -50,8 +49,7 @@ router.put('/:id', [auth, admin], async (req, res) => {
         name: genre.name
       },
       writer: req.body.writer,
-      isReleased: req.body.isReleased,
-      releaseDate : req.body.releaseDate
+      isReleased: req.body.isReleased
 
     }, { new: true });
 

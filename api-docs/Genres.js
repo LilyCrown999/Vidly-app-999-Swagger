@@ -46,6 +46,27 @@
  */
 
 
+/**
+ * @swagger
+ * /api/genres/{id}:
+ *    get:
+ *     summary: Delete the genre by the id
+ *     tags: [Genres]
+ *     parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: The genre's id
+ *     responses:
+ *       200:
+ *         description: Successful 😁😘
+ *       500:
+ *         description: Something went wrong
+ * 
+ */
+
 
 /**
  * @swagger
@@ -137,3 +158,4 @@
  *         description: Something went wrong
  * 
  */
+

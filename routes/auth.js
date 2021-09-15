@@ -56,23 +56,23 @@ router.put('/:id', async (req,res) =>{
 })
 
 
-router.delete('/', async (req,res) =>{
-//   const user = await User.findByIdAndRemove(req.params.id);
+// router.delete('/', async (req,res) =>{
+// //   const user = await User.findByIdAndRemove(req.params.id);
 
-//     if (!user) return res.status(404).json({success : true ,error :'The user with the given ID was not found...'});
+// //     if (!user) return res.status(404).json({success : true ,error :'The user with the given ID was not found...'});
   
-//     res.send(_.pick(user, ['_id','name','email']));
-})
+// //     res.send(_.pick(user, ['_id','name','email']));
+// })
 
 
-router.get('/:id', async (req,res) =>{
-//   const user = await User.findById(req.params.id);
+// router.get('/:id', async (req,res) =>{
+// //   const user = await User.findById(req.params.id);
 
-//     if(!user) return res.status(404).json({success : true ,error :'The user with the given ID was not found...'});
+// //     if(!user) return res.status(404).json({success : true ,error :'The user with the given ID was not found...'});
 
-//     res.send(_.pick(user, ['_id','name','email']));
+// //     res.send(_.pick(user, ['_id','name','email']));
 
-})
+// })
 
 
 function validate(req) {

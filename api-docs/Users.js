@@ -55,6 +55,30 @@
  * 
  */
 
+ /**
+ * @swagger
+ * /api/users/{id}:
+ *   get:
+ *     summary: Returns the User with the given id
+ *     tags: [Users]
+ *     parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: Take the id from the user @get:/api/users
+ *     description: Get user with given id
+ *     responses:
+ *       200:
+ *         description: Success
+ *       404:
+ *         description: Genres with the given id was not found
+ *       500:
+ *         description: Something went wrong
+ * 
+ */
+
 
 
 /**
@@ -93,8 +117,7 @@
  *        schema:
  *          type: string
  *        required: true
- *        description: Take the id from the user @get:/api/users
- *           
+ *        description: Take the id from the user @get:/api/users     
  *     requestBody:
  *       required: true
  *       content:
@@ -110,4 +133,29 @@
  *               $ref: '#/components/schemas/User'
  *       500:
  *         description: Some server error 
+ */
+
+
+ /**
+ * @swagger
+ * /api/users/{id}:
+ *   delete:
+ *     summary: Returns the User with the given id
+ *     tags: [Users]
+ *     parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: Take the id from the user @get:/api/users
+ *     description: Get user with given id
+ *     responses:
+ *       200:
+ *         description: Success
+ *       404:
+ *         description: Genres with the given id was not found
+ *       500:
+ *         description: Something went wrong
+ * 
  */

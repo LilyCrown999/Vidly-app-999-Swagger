@@ -130,17 +130,9 @@
  *          type: string
  *        required: true
  *        description: The genre's id
- *      - in: header
- *        name: x-auth-token
- *        schema:
- *          type: string
- *        required: true
- *        description: Get this by taking the token in the header when create new user at post:/api/user then  login the user at post:/api/auth...
  *     responses:
  *       200:
- *         description: Success
- *       404:
- *         description: Genres not found
+ *         description: Successfully deleted 😁😘
  *       500:
  *         description: Something went wrong
  * 

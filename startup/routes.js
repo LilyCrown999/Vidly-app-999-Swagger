@@ -34,7 +34,7 @@ const swaggerOptions = {
       servers: [  
 
         {
-          url: "http://localhost:100",
+          url: "",
         },
         {
           url: "http://localhost:999",

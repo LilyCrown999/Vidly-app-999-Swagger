@@ -17,10 +17,11 @@
  *           description: The email of the user (*unique)
  *         password:
  *           type: string
- *           description: The password required for the user to login 
+ *           description: The password required for the user to login
+ *       description: On error create user get @get:/api/users or create at @post:/api/users
  *       example:
- *         email: ahmedbolu@gmail.com
- *         password: password
+ *         email: swaggerauthtest@gmail.com
+ *         password: swagger
  */
 /**
   * @swagger

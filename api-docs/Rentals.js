@@ -21,7 +21,7 @@
  *           type: String
  *           description: The id of the genre get @get:/api/customers where movieId = id
  *       example:
- *         customerId: 
+ *         customerId: 6141f7d10bad624c842cb194
  *         genreId: 60ff231ea4aa140004c20d17
  */
 

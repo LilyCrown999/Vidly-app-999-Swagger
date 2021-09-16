@@ -1,6 +1,0 @@
-{
-    "jwtPrivateKey": "Michael",
-    "mongo_urL" : "mongodb+srv://Lily-Crown999:Lily-Crown999@cluster0.ynj90.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "mongo_url" : "mongodb://localhost:27017/vidly-app-999"
-
-}

@@ -17,7 +17,7 @@
  *           description: The auto-generated id of the user
  *         name:
  *           type: string
- *           description: The name of the Genre 
+ *           description: The name of the User
  *         email:
  *           type: string
  *           description: The email of the user (*unique)

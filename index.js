@@ -10,7 +10,8 @@ require('./startup/config')();
 require('./startup/validation')();
 require('./startup/prod')(app);
 
-const port = process.env.PORT || 1400;
+//TODO set if env = dev port = 999 and mongourl = localhost/mongodb
+const port = process.env.PORT || 999;
 
 const server = app.listen(port,() => winston.info(`Listening on port ${port}...`));
 

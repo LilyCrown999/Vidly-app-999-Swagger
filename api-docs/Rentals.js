@@ -89,7 +89,7 @@
  *         application/json:
  *           schema:
  *             $ref: '#/components/schemas/Rental'
- *     description: Get all rent history
+ *     description: Rent a movie.
  *     responses:
  *       200:
  *         description: Success

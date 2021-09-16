@@ -139,7 +139,7 @@
  * @swagger
  * /api/customers/{id}:
  *    delete:
- *     summary: Delete the genre by the id
+ *     summary: Delete the customer by the id
  *     tags: [Customers]
  *     parameters:
  *      - in: path

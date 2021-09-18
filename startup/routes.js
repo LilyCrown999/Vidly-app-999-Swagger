@@ -35,9 +35,11 @@ const swaggerOptions = {
 
         {
           url: "",
+          description: "vidlyns server",
         },
         {
           url: "http://localhost:999",
+          description: "Developer-option",
         },
       ],
     },
